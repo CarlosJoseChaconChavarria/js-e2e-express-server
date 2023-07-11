@@ -14,4 +14,3 @@ steps:
   displayName: 'Install NPM packages'
   inputs:
     command: 'install'
-    workingDir: '$(Build.ArtifactStagingDirectory)'
