@@ -14,11 +14,11 @@ steps:
   displayName: 'Install NPM packages'
   inputs:
     command: 'install'
-    workingDir: '$(workingDir)'
+    workingDir: '$(System.DefaultWorkingDirectory)'
 
 - task: Npm@1
   displayName: 'Run Build'
   inputs:
     command: 'custom'
     customCommand: 'run build'
-    workingDir: '$(workingDir)'
+    workingDir: '$(System.DefaultWorkingDirectory)'
