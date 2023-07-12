@@ -11,6 +11,12 @@ pool:
 
 steps:
 - task: Npm@1
+  displayName: 'Install NPM packages'
+  inputs:
+    command: 'install'
+    workingDir: '$(System.DefaultWorkingDirectory)'
+
+- task: Npm@1
   displayName: 'Run Build'
   inputs:
     command: 'custom'
